@@ -1,0 +1,41 @@
+---
+title: "Anime Recommendation"
+author: "Christina H Thai"
+date: "3/31/2020"
+output: html_document
+---
+
+
+```{r}
+library(sqldf)
+
+anime = read.csv("anime.csv")
+
+
+```
+
+
+This document seeks to utilize the library *sqldf* to determine the answer to the following questions: <br>
+
+1. Is there a correlation between fan base size and number of episodes?
+
+2. For active members, which genres are most popular (is there a stronger fan base for specific genres)?
+
+```{r}
+action = sqldf("SELECT * FROM anime
+               WHERE genre LIKE '%Action%';")
+```
+
+
+
+```{r}
+summary(anime)
+
+```
+
+
+```{r}
+
+
+
+```
